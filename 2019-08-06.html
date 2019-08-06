@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="style.css" />
+
+<strong>prototyping tools suck</strong>
+
+<p>i had a great conversation with a friend of mine on a walk last night. we were talking about the state of the art of prototyping tools and how they go completely overboard in the "design" sense, but don't really address the underlying issues.</p>
+
+<p>when i'm building something, i want to be able to quickly hook things up and see how they work. the key to creativity is not "coming up with an amazing idea": it's coming up with a mediocre idea and iterating on it VERY quickly. </p>
+
+<p>prototyping tools today like Sketch, Figma and Framer are great and allow designers to quickly mock up UIs, but often the UI that we are building ends up looking pretty much identical to the mockup. this is troubling because it's often just the first thing we put on paper. the first idea is typically not that great, but it gets us most of the way there. i believe this happens for two reasons:
+  
+<ol>
+  <li>the prototyping tools we have encourage us to construct "pixel-perfect" mockups and wireframes and literally box us into the notions of "views and controls"</li>
+  <li>we can't iterate on the underlying problem space because we don't have direct access to the affordances and the "places" of our apps like we do when we design something in physical, spatial settings</li>
+</ol>
+
+<p>it's kind of weird to see the progression of UI prototyping tools: the first attempt at this sort of came out of Photoshop. i remember being about 15 and building actual pixel-perfect mockups of websites that i'd slice up and slap into an HTML page. this was great because I didn't have to do a ton of thinking about how i would write the page, but i ended up with pretty massive page load times and some truly heinous markup (sorry browsers).</p>
+
+<p>later on, vector drawing tools like Sketch started to emerge that promised resolution-independence. the side-effect of this was allowing us to no longer focus necessarily on "pixel-perfection", but to draw more freely at different scales. ultimately though, these were still static mockups.</p>
+
+<p>then tools like invision came along and added small snippets of interactivity (and storyboarding) to otherwise static mockups that could be imported from sketch or photoshop. this is the current state of the art, the basis of which is the "view" and the building blocks of which are "controls" or "hotspots" that work a lot like html image maps did back in the day. tools like figma and framer can actually do some pretty crazy modelling of interactivity and animations, but ultimately they don't get close enough to the meat of the problem of designing a UI from "nothing".
+</p> 
+
+<p>if we look at the primitives of UI design, we can see we have "places" and "afforadances". these ideas come from a number of sources including Don Norman and Jakob Nielsen who have been thinking about UI design from a "first-principles" approach before the field even formally existed.</p>
+
+<p>recently, Ryan Singer from Basecamp published <a href="https://basecamp.com/shapeup">"Shape Up", an e-book</a> about the Basecamp design processs. it's very good, and i'd encourage you to read it if you have any interest in product design (it's also free). in it, he introduces a paper-based shorthand for conveying mental models of applications during the design process by drawing ONLY the affordances, "places", and connections between them. this is one of the most brilliant, simple, and insightful approaches to product design that i've ever come across. i was so blown away by this piece that i almost forgot to read the rest of the book.</p>
+
+<p>i really think this would work well as a prototyping tool, and i want to build it, but it's almost a chicken and egg problem. the best way to build it would be to use it.</p>
