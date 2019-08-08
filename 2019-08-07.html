@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="style.css" />
+
+<strong>what the hell is a functional spec anyway?</strong>
+
+<p>informally speaking, a "functional specification" is a document that details how a piece of software should work. most examples of these are long-winded microsoft word-looking documents set in times new roman that are about as interesting to read as the proceedings of the ACM combined with all the visual appeal of a final will and testament (which i guess is... sort of (?) a user story). </p>
+
+<p>as far as i can tell, there are three purposes to creating a functional spec:</p>
+
+<ol>
+  <li>it should inform the developers what needs to be built (not necessarily how to build it)</li>
+  <li>if should give stakeholders an idea of what they're paying the developers to build and whether or not it's going to be useful</li>
+  <li>it should give us an idea of how to test the damn thing</li>
+</ol>
+
+<p>here are the state-of-the art tools that we have to create something things that vaguely smell like functional specifications:</p>
+
+<ul>
+  <li>google docs of user stories</li>
+  <li>piles of incomprehensible flowcharts</li>
+  <li>unholy collections of asana tasks (or worse, jira cards)</li>
+  <li>integration tests</li>
+  <li>end-to-end tests</li>
+  <li>fully fleshed-out UI mockups that languish the moment a developer sets their eyes on them</li>
+  <li>doxygen documentation (sorry)</li>
+  <li>an actual running product that exists</li>
+</ul>
+
+<p>arguably, the only one of those things that comes even remotely close to answering the question of "what is the ideal functional spec of a product?" is the latter. software developers crave certainty, to an unbounded degree. given a spec, they’ll always want a spec that dives <em>just a little bit deeper</em>.</p>
+
+<p>obviously, this poses itself as a recursive problem: in order to completely specify the behavior of a piece of software we should not have to write the software. but also, once the software is written, we shouldn't have to go back and necessarily update our functional spec.</p>
+
+<p>but consider this: most of the time, a functional spec doesn't tell you exactly how the software looks or works. instead it invokes a set of affordances and how they relate to behaviors, the presentation of data, and users ("when i click on the 'save' button, the user should see a modal dialog that allows them to enter a filename and choose a directory in which to save the document"). and yet, usually the only stage of implementation where the actual freaking affordance ever makes an appearance is <strong>in the final implementation of the software</strong>.</p>
+
+<p>i digress, sometimes it appears in the UI mockups, but do you have any idea how long it takes to build those? plus, they're just going to go out of date anyway as soon as some developer gets their hands on the code, or as soon as the stakeholder taps through the invision mockup and realizes that the thing that you just spent 2 weeks designing doesn't actually solve the problem (or worse, is catastrophically flawed in a way that they a a domain expert were able to pick apart within two and a half seconds of playing with your demo). good luck trying to update your trove of poorly named Sketch files with dozens of copy-pasted artboards and symbols.</p>
+
+<p>this (obivously fatalistic) view is what represents the state-of-the-art of the tools we have today for prototyping, rapid iteration, and communication of mental models (as well as concrete models of software). i believe there is hope here: despite the fact that we will never achieve the "holy grail" of software specs, we absolutely can create tools that push the industry forward. whether that's by making mockups easier to maintain (or easier to throw away), by actually prototyping with affordances FIRST, by including metadata about a particular idea evolved, making it easier to iterate quickly and present a particular scenario, by creating a shared language between product designers, developers, and end-users, we MUST invest in building these tools. otherwise we're going to be staring at a lot of google docs.</p>
