@@ -9,3 +9,10 @@ html {
 p:not(:last-child) {
   margin-bottom: 1.5rem;
 }
+
+img {
+  width: 100%;
+  max-width: 400px;
+  margin: 3rem auto;
+  display: block;
+}

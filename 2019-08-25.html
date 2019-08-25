@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="style.css" />
+
+<strong>messing around with unison</strong>
+
+<p>i've been playing around with the <a href="http://unisonweb.org/posts/">unison</a> alpha for the last two days. the syntax is very close to haskell, and it's definitely the least interesting part of the whole system. unison's stated goal is to be able to describe an entire distributed system within a single program. unfortunately i haven't been able to dig deeply enough to do that, and i don't really know where i would start (particularly because i don't have any distributed systems to write?) but it does sound like a promising way to build large systems without having to cobble together lots of different technologies.</p>
+
+<p>unison's approach to versioning and building a "codebase" is quite unique. the authors of the language have reified the concept of a <em>codebase</em> into something more than just a collection of lines of source code. think of it more like a well-defined object that we can transform in a coherent, strongly-typed way. the idea is that for everything inside a codebase, once it's there, it's there for good. as far as i understand it, the thought is that when editing a function for example, that particular version of the function gets assigned a unique hash. as the input and return types, or the implementation of the function changes, the hash also changes. any functions that depend on a particular version of a function can continue to rely on that version. think about how different the world would be if we didn't have to rely on semantic versioning for controlling dependencies...</p>
+
+<p>the aspect that struck me the most was the way that unison integrates the repl experience with the editor experience. rather than coding entirely inside a repl and then transitioning to the editor, unison adopts a "scratch" file approach that is super unique. you run the <code>ucm</code> tool in the CLI which waits for changes to <code>.u</code> files inside of a <em>codebase</em>. it's possible to output the results of a particular command by using the <code>&gt;</code> operator to see the result printed in the console.</p>
+
+<img src="/images/2019-08-25/1.png" />
+
+<p>the languge also comes built-in with a testing library which formats its results very nicely and allows us to define a set of well-structured tests in a very repl-like way. this means we can be working in a file like <code>scratch.u</code> and start writing some code, and then write some tests at the same time without having to switch files, run the test suite, etc. it's a very well-considered experience that i think would be tremendously useful for writing good modules.</p>
+
+<img src="/images/2019-08-25/2.png" />
+
+<p>the test output is nicely formatted and the tests themselves can be assigned to a <code>tests.</code> tree to be run selectively later on. this is stellar because it's a great middle-ground between co-locating code with tests, and having some isolation between them.</p>
+
+<p>i look forward to seeing where unison goes, and i'll update you once i get my hands dirty with the distributed systems aspects of it. for now, if you want to check it out, head over to their <a href="http://unisonweb.org/">website</a> or to the unison page on <a href="https://github.com/unisonweb/unison">github</a>.</p>
